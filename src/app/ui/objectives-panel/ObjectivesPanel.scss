@@ -1,0 +1,35 @@
+$item-size: 24px;
+$item-margin: 2px;
+#objectives-panel {
+    margin: 1em;
+    display: flex;
+    flex-flow: column nowrap;
+    width: ($item-size + $item-margin * 2) * 5 + 2;
+    background-color: #ccc;
+    border: 1px solid #999;
+    border-radius: 5px;
+    div > .icon,
+    div > .checkbox {
+        width: $item-size;
+        margin: $item-margin;
+        text-align: center;
+    }
+    div > .checkbox {
+        padding: 0 3px;
+    }
+    .red {
+        color: red;
+    }
+    .blue {
+        color: blue;
+    }
+    .yellow {
+        color: rgb(241, 241, 35) !important;
+    }
+    .green {
+        color: green;
+    }
+    .purple {
+        color: purple;
+    }
+}

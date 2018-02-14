@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 import Draggable from 'react-draggable';
 import _ from 'lodash';
 // local
-import IncController from 'app/inc-controller';
-import GridItem from 'app/grid-item';
+import ObjectivesPanel from 'app/ui/objectives-panel';
+import IncController from 'app/ui/inc-controller';
+import GridItem from 'app/ui/grid-item';
 // css
 import './Grid.css';
 
@@ -22,8 +23,8 @@ class Grid extends Component {
     constructor(props) {
         super(props);
         const grid = [];
-        const rowSize = 5;
-        for (let i = 0; i < 5; i++) {
+        const rowSize = 1;
+        for (let i = 0; i < rowSize; i++) {
             grid.push(_.fill(Array(rowSize), defaultObj));
         }
         const width = ITEM_SIZE * rowSize;
@@ -70,6 +71,7 @@ class Grid extends Component {
         const width = ITEM_SIZE * rowSize;
         return (
             <div id="grid-layout">
+                <ObjectivesPanel />
                 <IncController handleController={this.handleController} />
                 <Draggable defaultPosition={defaultPosition} position={null}>
                     <div id="grid-wrapper" style={{ width }}>

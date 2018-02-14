@@ -1,12 +1,20 @@
 // global
 import React, { Component } from 'react';
+import { Provider } from 'react-redux';
 // local
-import Grid from 'app/grid';
+import Grid from 'app/ui/grid';
+// import the redux store
+import store from 'app/redux/store';
 // css
 import './Root.css';
+
 class Root extends Component {
     render() {
-        return <Grid />;
+        return (
+            <Provider store={store}>
+                <Grid />
+            </Provider>
+        );
     }
 }
 
