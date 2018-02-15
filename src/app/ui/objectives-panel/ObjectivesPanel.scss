@@ -1,5 +1,6 @@
 $item-size: 24px;
 $item-margin: 2px;
+
 #objectives-panel {
     margin: 1em;
     display: flex;
@@ -17,19 +18,23 @@ $item-margin: 2px;
     div > .checkbox {
         padding: 0 3px;
     }
-    .red {
-        color: red;
-    }
-    .blue {
-        color: blue;
-    }
-    .yellow {
-        color: rgb(241, 241, 35) !important;
-    }
-    .green {
-        color: green;
-    }
-    .purple {
-        color: purple;
-    }
+}
+
+.c-red {
+    color: red;
+}
+.c-blue {
+    color: blue;
+}
+.c-yellow {
+    color: rgb(241, 241, 35);
+}
+.c-green {
+    color: green;
+}
+.c-purple {
+    color: purple;
+}
+.empty {
+    color: #666 !important;
 }

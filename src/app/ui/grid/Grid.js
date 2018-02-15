@@ -9,7 +9,7 @@ import GridItem from 'app/ui/grid-item';
 // css
 import './Grid.css';
 
-const ITEM_SIZE = 52;
+const ITEM_SIZE = 51;
 
 const defaultObj = {
     top: null,
@@ -23,7 +23,7 @@ class Grid extends Component {
     constructor(props) {
         super(props);
         const grid = [];
-        const rowSize = 1;
+        const rowSize = 2;
         for (let i = 0; i < rowSize; i++) {
             grid.push(_.fill(Array(rowSize), defaultObj));
         }
@@ -62,13 +62,15 @@ class Grid extends Component {
                 grid.push(_.fill(Array(rowSize), defaultObj));
                 break;
             }
+            default:
+                break;
         }
         this.setState({ grid, rowSize });
     };
 
     render() {
         const { grid, rowSize, defaultPosition } = this.state;
-        const width = ITEM_SIZE * rowSize;
+        const width = ITEM_SIZE * rowSize + 2; // 2 is the wrapper border
         return (
             <div id="grid-layout">
                 <ObjectivesPanel />

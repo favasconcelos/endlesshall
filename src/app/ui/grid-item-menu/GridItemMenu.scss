@@ -1,0 +1,48 @@
+.grid-item-menu {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    .panel {
+        position: relative;
+        width: 101px;
+        margin-top: 8px;
+    }
+    .border-panel {
+        height: 30px;
+        .top,
+        .bottom {
+            width: 80%;
+            height: 5px;
+            transform: translateX(-50%);
+            left: 50%;
+        }
+        .left,
+        .right {
+            width: 5px;
+            height: 80%;
+            transform: translateY(-50%);
+            top: 50%;
+        }
+        .left,
+        .top,
+        .right,
+        .bottom {
+            position: absolute;
+            background-color: #666;
+            cursor: pointer;
+        }
+        .left {
+            left: 0;
+        }
+        .top {
+            top: 0;
+        }
+        .right {
+            right: 0;
+        }
+        .bottom {
+            bottom: 0;
+        }
+    }
+}

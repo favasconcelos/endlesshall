@@ -1,3 +1,48 @@
+$border-color: #111;
+$border-size: 3px;
+
 .grid-item {
     position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 0.5px;
+    background: #ccc;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    & > * {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .menu {
+        position: absolute;
+        top: 0.1em;
+        right: 0.1em;
+        color: #000;
+        font-size: 0.8em;
+        width: 0.8em;
+        line-height: 0.8em;
+        height: 0.8em;
+        cursor: pointer;
+    }
+}
+
+.border-left {
+    border-left: $border-size solid $border-color;
+}
+
+.border-top {
+    border-top: $border-size solid $border-color;
+}
+
+.border-right {
+    border-right: $border-size solid $border-color;
+}
+
+.border-bottom {
+    border-bottom: $border-size solid $border-color;
 }
